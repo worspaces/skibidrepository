@@ -3,13 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Woehl Plumbing Co.</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>rizzes.online</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      font-family: Impact, sans-serif;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        #2a2a2a,
+        #2a2a2a 10px,
+        #1a1a1a 10px,
+        #1a1a1a 20px
+      );
+      background-size: 200% 200%;
+      animation: moveStripes 12s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveStripes {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      padding: 20px;
+    }
+
+    .content h1 {
+      font-size: 8vw;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .honorable {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .honorable p {
+      font-size: 2.5vw;
+      margin-bottom: 10px;
+    }
+
+    .image-container {
+      background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .image-container img {
+      display: block;
+      max-width: 250px;
+      height: auto;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 1.5vw;
+      opacity: 0.85;
+    }
+
+    .footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .content h1 {
+        font-size: 12vw;
+      }
+      .honorable p {
+        font-size: 5vw;
+      }
+      .image-container {
+        padding: 8px;
+      }
+      .image-container img {
+        max-width: 150px;
+      }
+      .footer {
+        font-size: 3.5vw;
+        padding: 0 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="background"></div>
+
   <div class="content">
     <h1><i>*.rizzes.online</i></h1>
+
+    <div class="honorable">
+      <p>Honorable mention:</p>
+      <div class="image-container">
+        <img src="/dr%20woehl.png" alt="Dr. Woehl">
+      </div>
+    </div>
+
     <p class="footer">
       Claim your subdomain today at
       <a href="https://freedns.afraid.org/" target="_blank" rel="noopener noreferrer"><b>this link!</b></a>
