@@ -26,7 +26,7 @@
         #1a1a1a 20px
       );
       background-size: 200% 200%;
-      animation: moveStripes 4s linear infinite;
+      animation: moveStripes 12s linear infinite;
       z-index: 0;
     }
 
@@ -58,6 +58,30 @@
       font-size: 8vw;
       line-height: 1.1;
       letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .honorable {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .honorable p {
+      font-size: 2.5vw;
+      margin-bottom: 10px;
+    }
+
+    .image-container {
+      background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .image-container img {
+      display: block;
+      max-width: 250px;
+      height: auto;
     }
 
     .footer {
@@ -75,6 +99,15 @@
     @media (max-width: 500px) {
       .content h1 {
         font-size: 12vw;
+      }
+      .honorable p {
+        font-size: 5vw;
+      }
+      .image-container {
+        padding: 8px;
+      }
+      .image-container img {
+        max-width: 150px;
       }
       .footer {
         font-size: 3.5vw;
